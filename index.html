@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rinoPvP V19</title>
+
+<!-- EXO 2 (CLEAN IMPORT) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:'Exo 2', sans-serif;
+color:#fff;
+background:linear-gradient(135deg,#000,#0a0a0a,#001a14);
+overflow:auto;
+}
+
+/* NAV */
+nav{
+background:#111;
+padding:12px;
+text-align:center;
+border-bottom:1px solid #00ff99;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+nav a{
+color:#ccc;
+margin:0 12px;
+cursor:pointer;
+text-decoration:none;
+font-size:15px;
+}
+
+nav a:hover{
+color:#00ff99;
+}
+
+/* HERO (ANA SAYFA BÜYÜTÜLDÜ) */
+.hero{
+min-height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:72px;
+margin:0;
+color:#00ff99;
+letter-spacing:2px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.8;
+margin-top:10px;
+}
+
+/* BUTTON */
+button{
+padding:12px 18px;
+margin-top:20px;
+background:#00ff99;
+border:none;
+color:#000;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+font-size:15px;
+}
+
+button:hover{
+transform:scale(1.05);
+transition:0.2s;
+}
+
+/* SECTIONS */
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+h2{
+color:#00ff99;
+font-size:32px;
+}
+
+/* CARD */
+.card{
+background:#111;
+padding:15px;
+margin:10px auto;
+width:260px;
+border:1px solid #00ff99;
+border-radius:10px;
+transition:0.2s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+/* VIP */
+.vip{
+display:inline-block;
+padding:8px 12px;
+border:1px solid #00ff99;
+color:#00ff99;
+border-radius:8px;
+margin-top:10px;
+}
+
+/* ICONS */
+img{
+width:120px;
+margin:10px;
+}
+
+/* CONTACT */
+.contact{
+color:#ccc;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a onclick="go('home')">Ana</a>
+<a onclick="go('features')">Özellikler</a>
+<a onclick="go('vip')">VIP</a>
+<a onclick="go('contact')">İletişim</a>
+</nav>
+
+<!-- HERO HOME -->
+<section id="home" class="hero">
+
+<h1>rinoPvP</h1>
+<p>Minecraft PvP Network</p>
+
+<button onclick="copyIP()">IP Kopyala</button>
+
+</section>
+
+<section id="features">
+
+<h2>Özellikler</h2>
+
+<div class="card">
+<img src="https://api.iconify.design/game-icons:sword-clash.svg?color=%2300ff99">
+<p>Gelişmiş PvP Sistemi</p>
+</div>
+
+<div class="card">
+<img src="https://api.iconify.design/game-icons:archer.svg?color=%2300ff99">
+<p>Özel Kitler</p>
+</div>
+
+</section>
+
+<section id="vip">
+<h2>VIP</h2>
+<div class="vip">Yapım Aşamasında...</div>
+</section>
+
+<section id="contact">
+<h2>İletişim</h2>
+<div class="contact">oyundaspor2016@gmail.com</div>
+</section>
+
+<script>
+
+function go(id){
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+function copyIP(){
+const ip="rinoPvP.aternos.me";
+
+let t=document.createElement("textarea");
+t.value=ip;
+document.body.appendChild(t);
+t.select();
+document.execCommand("copy");
+t.remove();
+
+alert("IP kopyalandı");
+}
+
+</script>
+
+</body>
+</html>
